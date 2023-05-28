@@ -2,7 +2,7 @@ import {RiFacebookCircleFill, RiLinkedinFill, RiGithubFill } from "react-icons/r
 
 export default function Footer() {
   return (
-    <div className="footer py-8 w-full bg-gray-200 border-2 sm:border-0 border-b-0 border-gray-950 dark:border-white dark:bg-gray-950 rounded-t-3xl sm:rounded-none">
+    <div className="footer py-8 w-full">
         <div className=" h-full w-full blur-none filter-none">
             <div className="flex h-full w-full justify-center items-center">
                 <div>
