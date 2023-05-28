@@ -16,7 +16,7 @@
 {
   .btn
   {
-    @apply py-1 px-3 border-2 rounded-lg dark:border-slate-900 dark:bg-slate-800 active:scale-95
+    @apply mx-1 py-1 px-3 border-2 rounded-lg dark:border-slate-900 dark:bg-slate-800 active:scale-95
   }
 
   .btn--blue 
@@ -31,6 +31,6 @@
 
   .footer
   {
-    @apply overflow-hidden items-center sm:items-start grid sm:justify-center sm:mt-8 dark:text-white text-center
+    @apply hidden sm:grid overflow-hidden items-center sm:items-start sm:justify-center sm:mt-8 dark:text-white text-center
   }
 }
