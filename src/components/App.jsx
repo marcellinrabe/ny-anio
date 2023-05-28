@@ -37,17 +37,15 @@ export default function App() {
 
   return (
     <div className={theme}>
-        <div className="w-screen h-screen overflow-hidden flex items-center justify-center bg-gray-200 dark:bg-gray-950 transition-all duration-200">
-            <div className="w-full max-w-xl">
-            <div className="bg-white shadow-xl rounded-xl dark:bg-slate-800 dark:text-white transition-none mx-8">
-                <FormWithStore/>
-                <BreakLine/>
-                <ListTodoWithStore/>            
+        <div className="w-screen h-screen overflow-hidden grid sm:flex sm:items-center sm:justify-center sm:bg-gray-200 dark:bg-slate-800 dark:sm:bg-gray-950 transition-all duration-200">
+            <div className="w-full sm:h-fit sm:max-w-xl grid h-screen grid-rows-[80vh_20vh] sm:items-center">
+                <div className="bg-white dark:bg-slate-800 sm:h-fit dark:text-white shadow-xl sm:rounded-xl transition-none">
+                    <FormWithStore/>
+                    <BreakLine/>
+                    <ListTodoWithStore/>            
+                </div>
+                <Footer/>      
             </div>
-            <Footer/> 
-
-            </div>
-                     
         </div>
     </div>
       

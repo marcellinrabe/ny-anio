@@ -9,8 +9,8 @@ function TodoList({todos}) {
     
     return <>
           <TodoFilters todosLength={todos.length}/>
-          <div className="p-4">
-          <div className="px-4 h-64 overflow-auto mx-auto my-2">
+          <div className="p-4 h-[55vh] sm:h-64 overflow-auto">
+          <div className="px-4 mx-auto my-2">
           {
             todoList ? (
                 <ul> 

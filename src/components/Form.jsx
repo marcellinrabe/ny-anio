@@ -60,8 +60,8 @@ function Form({onSubmit, theme, onSwitchTheme, error, onError})
         textAreaRef.current.focus()
     }
 
-    return <div className="py-2 mx-2">
-        <form onSubmit={createNewTodo} onKeyDownCapture={onKeyEnter}>
+    return <div className="py-2 mx-2 h-[20vh]">
+        <form onSubmit={createNewTodo} onKeyDownCapture={onKeyEnter} className="grid h-full">
             <div>
                 <textarea 
                     ref={textAreaRef}
