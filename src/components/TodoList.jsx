@@ -9,6 +9,7 @@ function TodoList({todos}) {
     
     return <>
           <TodoFilters todosLength={todos.length}/>
+          <div className="p-4">
           <div className="px-4 h-64 overflow-auto mx-auto my-2">
           {
             todoList ? (
@@ -22,6 +23,9 @@ function TodoList({todos}) {
             )
           }
           </div>
+
+          </div>
+          
     </>
 }
 

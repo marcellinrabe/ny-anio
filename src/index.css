@@ -6,7 +6,8 @@
 {
   body
   {
-    @apply text-sm 
+    @apply text-sm;
+    font-family: 'Roboto', sans-serif;
   }
 }
 
@@ -14,11 +15,16 @@
 {
   .btn
   {
-    @apply py-1 px-3 border-2 rounded-lg dark:border-slate-900 dark:bg-slate-800
+    @apply py-1 px-3 border-2 rounded-lg dark:border-slate-900 dark:bg-slate-800 active:scale-95
   }
 
   .btn--blue 
   {
     @apply bg-blue-500 border-blue-500 dark:bg-blue-500 dark:border-blue-500
+  }
+
+  .font-bold
+  {
+    font-family: 'Arial', sans-serif;
   }
 }

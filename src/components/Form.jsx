@@ -30,11 +30,13 @@ function Form({onSubmit, theme, onSwitchTheme, error, onError})
             .current
             .value
             .trim()
+
         if(!label.length > 0)
             return false
-        
 
-        if(todos.filter(todo => todo.label === textAreaRef.current.value).length > 0) {
+        if(!label.length < 4)
+            onError("Ecris au moins 4 caractères")
+        else if(todos.filter(todo => todo.label === label).length > 0) {
             onError("Cette tâche existe déjà")
         } else {
             onSubmit(label)
