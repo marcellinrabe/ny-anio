@@ -61,8 +61,7 @@ export function todoReducer(state=initialState, action)
                 {
                     return { 
                         ...todo, 
-                        label: action.payload.newLabel, 
-                        time: setDate()
+                        label: action.payload.newLabel,
                     }
                 }
                 else

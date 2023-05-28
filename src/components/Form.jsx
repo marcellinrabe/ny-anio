@@ -31,10 +31,9 @@ function Form({onSubmit, theme, onSwitchTheme, error, onError})
             .value
             .trim()
 
-        if(!label.length > 0)
+        if(0 >= label.length)
             return false
-
-        if(!label.length < 4)
+        else if(label.length < 4)
             onError("Ecris au moins 4 caractères")
         else if(todos.filter(todo => todo.label === label).length > 0) {
             onError("Cette tâche existe déjà")
@@ -74,7 +73,7 @@ function Form({onSubmit, theme, onSwitchTheme, error, onError})
             </div>
             <div className="flex justif-between w-full gap-2">
                 <div id="error-field" className={`flex-1 flex items-center`}>
-                    <span className="italic text-red-500">
+                    <span className="italic font-bold text-red-500">
                         {error.isError ? error.errorText : ""} 
                     </span>
                 </div>
