@@ -1,6 +1,4 @@
 import { ListTodoWithStore } from "./TodoList"
-import BreakLine from "./BreakLine"
-import FormWithStore from "./Form"
 import Footer from "./Footer"
 import { useDispatch, useSelector } from "react-redux"
 import { themeSelector } from "../store/theme/themeSelectors"
@@ -37,13 +35,9 @@ export default function App() {
 
   return (
     <div className={theme}>
-        <div className="w-screen h-screen overflow-auto sm:overflow-hidden grid sm:flex sm:items-center sm:justify-center sm:bg-gray-200 dark:bg-slate-800 dark:sm:bg-gray-950 transition-all duration-200">
-            <div className="w-full sm:h-fit sm:max-w-xl sm:grid items-stretch sm:items-center">
-                <div className="bg-white h-full dark:bg-slate-800 sm:h-fit dark:text-white shadow-xl sm:rounded-xl transition-none">
-                    <FormWithStore/>
-                    <BreakLine/>
-                    <ListTodoWithStore/>            
-                </div>
+        <div className="w-screen h-screen overflow-hidden grid sm:flex sm:items-center sm:justify-center sm:bg-gray-200 dark:bg-slate-800 dark:sm:bg-gray-950 transition-all duration-200">
+            <div className="w-full sm:h-fit sm:max-w-xl sm:grid sm:items-center">
+                <ListTodoWithStore/>            
                 <Footer/>      
             </div>
         </div>

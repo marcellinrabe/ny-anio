@@ -3,30 +3,37 @@ import PropTypes from "prop-types"
 import { todosSortedByTimeSelector } from "../store/todos/todoSelectors"
 import TodoItem from "./TodoItem"
 import TodoFilters from "./TodoFilters"
+import FormWithStore from "./Form"
+import BreakLine from "./BreakLine"
 
 function TodoList({todos}) {
     const todoList = todos.length === 0 ? null : todos
     
-    return <>
-          <TodoFilters todosLength={todos.length}/>
-          <div className="p-4 sm:h-64 sm:overflow-auto">
-          <div className="px-2 mx-auto my-2">
-          {
-            todoList ? (
-                <ul> 
-                    {todoList.map(todo => <TodoItem key={todo.id} todo={todo}/>)}   
-                </ul>
-            ) : (
-                <div className="h-full flex justify-center items-center">
-                    <span>vide</span>
-                </div>
-            )
-          }
+    return  <div className="flex flex-col h-screen border border-white  bg-white dark:bg-slate-800 sm:h-fit dark:text-white shadow-xl sm:rounded-xl transition-none">
+        <div>
+            <FormWithStore/>
+            <BreakLine/>
+            <TodoFilters todosLength={todos.length}/>
+        </div>
+        <div className="flex-1 overflow-y-auto">
+        <div className="p-4 sm:h-64 overflow-auto">
+            <div className="px-2 mx-auto my-2">
+            {
+                todoList ? (
+                    <ul> 
+                        {todoList.map(todo => <TodoItem key={todo.id} todo={todo}/>)}   
+                    </ul>
+                ) : (
+                    <div className="h-full flex justify-center items-center">
+                        <span>vide</span>
+                    </div>
+                )
+            }
+            </div>
           </div>
 
-          </div>
-          
-    </>
+        </div>
+    </div>
 }
 
 TodoList.propTypes = {
