@@ -41,7 +41,7 @@ export default function TodoItem({todo}) {
     <li className="border shadow-md border-b-2 rounded-md border-b-blue-400 dark:border-gray-950 bg-gray-50 dark:bg-gray-900 p-2 my-1">
         <div className=" flex justify-between items-center">
         <div className="flex items-center justify-between w-full">
-                <button onClick={toggleCheck}>
+            <button onClick={toggleCheck}>
                     {
                         todo.completed ? (
                             <MdCheck size={18} />
@@ -49,18 +49,18 @@ export default function TodoItem({todo}) {
                             <BiCheckbox size={18} />
                         )
                     }
-                </button>
-            <div className="flex-auto flex items-center">
+            </button>
+            <div className="flex-auto flex items-center w-full">
                 <input ref={labelInput} 
                     type="text" 
                     defaultValue={todo.label} 
-                    className="outline-none p-2 bg-gray-50 dark:bg-gray-950 focus:bg-gray-200 rounded-md w-full disabled:bg-gray-50 dark:disabled:bg-gray-900" 
+                    className="w-full outline-none p-2 bg-gray-50 dark:bg-gray-950 focus:bg-gray-200 rounded-md disabled:bg-gray-50 dark:disabled:bg-gray-900" 
                     disabled={readOnly} 
                     onKeyDownCapture={updateTodo}
                 />
             </div>
         </div>
-        <div className="flex w-full justify-end">
+        <div className="flex justify-end">
             {/* <div className="text-gray-500 font-bold">
                 {`${todo.time.hour.toString().padStart(2, '0')}h
                 ${todo.time.minute.toString().padStart(2, '0')}min`

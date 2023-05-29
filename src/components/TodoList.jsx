@@ -9,14 +9,14 @@ import BreakLine from "./BreakLine"
 function TodoList({todos}) {
     const todoList = todos.length === 0 ? null : todos
     
-    return  <div className="flex flex-col h-screen bg-white dark:bg-slate-800 sm:h-fit dark:text-white shadow-2xl sm:rounded-t-xl transition-none">
+    return  <div className="flex flex-col h-screen bg-white dark:bg-slate-800 sm:h-fit dark:text-white shadow-2xl sm:rounded-xl sm:pb-2 transition-none">
         <div>
             <FormWithStore/>
             <BreakLine/>
             <TodoFilters todosLength={todos.length}/>
         </div>
         <div className="flex-1 overflow-y-auto">
-        <div className="p-4 sm:h-64 overflow-auto">
+        <div className="p-4 sm:h-64 overflow-auto todo--container">
             <div className="px-2 mx-auto my-2">
             {
                 todoList ? (
