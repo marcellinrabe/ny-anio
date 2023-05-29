@@ -9,7 +9,7 @@ import BreakLine from "./BreakLine"
 function TodoList({todos}) {
     const todoList = todos.length === 0 ? null : todos
     
-    return  <div className="flex flex-col h-screen bg-white dark:bg-slate-800 sm:h-fit dark:text-white shadow-xl sm:rounded-xl transition-none">
+    return  <div className="flex flex-col h-screen bg-white dark:bg-slate-800 sm:h-fit dark:text-white shadow-2xl sm:rounded-t-xl transition-none">
         <div>
             <FormWithStore/>
             <BreakLine/>

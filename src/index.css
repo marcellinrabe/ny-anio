@@ -6,9 +6,7 @@
 {
   body
   {
-    @apply text-sm;
-    font-family: 'Roboto', sans-serif;
-
+    font-family: 'Source Sans Pro', sans-serif;
   }
 }
 
@@ -24,13 +22,8 @@
     @apply bg-blue-500 border-blue-500 dark:bg-blue-500 dark:border-blue-500
   }
 
-  .font-bold
-  {
-    font-family: 'Arial', sans-serif;
-  }
-
   .footer
   {
     @apply hidden sm:grid overflow-hidden items-center sm:items-start sm:justify-center sm:mt-8 dark:text-white text-center
-  }
+  }  
 }

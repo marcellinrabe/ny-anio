@@ -77,15 +77,15 @@ function Form({onSubmit, theme, onSwitchTheme, error, onError})
                         {error.isError ? error.errorText : ""} 
                     </span>
                 </div>
-                <div className="flex-none flex gap-2 justify-end items-center">
+                <div className="flex-none flex justify-end items-center">
                     <button className="btn" onClick={switchTheme}>{theme === "light" ? <MdDarkMode size={18} className="text-gray-900" /> : <MdLightMode size={18} className="text-yellow-500" /> }</button>
-                    <button className="btn text-gray-400 font-bold" onClick={clear}>
+                    {/* <button className="btn text-gray-400 font-bold" onClick={clear}>
                         <div className="flex gap-2">
                             <MdClear size={18} />
                             <span className="">Effacer</span>
                         </div>  
-                    </button>
-                    <button className="btn btn--blue text-white font-bold" type="submit">Ajouter</button>
+                    </button> */}
+                    <button className="btn btn--blue text-white" type="submit">Ajouter</button>
                 </div>
             </div>
             
