@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("./assets/SourceSansPro-Regular.ttf");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -27,7 +32,7 @@
     @apply hidden sm:grid overflow-hidden items-center sm:items-start sm:justify-center sm:mt-8 dark:text-white text-center
   }  
 
-  .todo--container::-webkit-scrollbar {
+  .todo--container::-webkit-scrollbar, .todo--container::-moz-horizontal-scrollbar {
     display: none; /* Hide the scrollbar */
   }
 }

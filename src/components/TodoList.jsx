@@ -17,7 +17,7 @@ function TodoList({todos}) {
         </div>
         <div className="flex-1 overflow-y-auto">
         <div className="p-4 sm:h-64 overflow-auto todo--container">
-            <div className="px-2 mx-auto my-2">
+            <div className="px-2 mx-auto my-2 h-full">
             {
                 todoList ? (
                     <ul> 

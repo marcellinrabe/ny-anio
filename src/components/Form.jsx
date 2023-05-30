@@ -2,7 +2,7 @@ import { useRef } from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import { useSelector } from "react-redux"
-import { MdDarkMode, MdLightMode, MdClear } from "react-icons/md"
+import { MdDarkMode, MdLightMode } from "react-icons/md"
 import { createNewTodoAction } from "../store/todos/todoActions"
 import { errorSelector } from "../store/error/errorSelectors"
 import { todosSortedByTimeSelector } from "../store/todos/todoSelectors"
@@ -79,12 +79,6 @@ function Form({onSubmit, theme, onSwitchTheme, error, onError})
                 </div>
                 <div className="flex-none flex justify-end items-center">
                     <button className="btn" onClick={switchTheme}>{theme === "light" ? <MdDarkMode size={18} className="text-gray-900" /> : <MdLightMode size={18} className="text-yellow-500" /> }</button>
-                    {/* <button className="btn text-gray-400 font-bold" onClick={clear}>
-                        <div className="flex gap-2">
-                            <MdClear size={18} />
-                            <span className="">Effacer</span>
-                        </div>  
-                    </button> */}
                     <button className="btn btn--blue text-white" type="submit">Ajouter</button>
                 </div>
             </div>

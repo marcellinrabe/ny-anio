@@ -35,7 +35,7 @@ export default function App() {
 
   return (
     <div className={theme}>
-        <div className="w-screen h-screen overflow-hidden grid sm:flex sm:items-center sm:justify-center sm:bg-gray-200 dark:bg-slate-800 dark:sm:bg-gray-950 transition-all duration-200">
+        <div className="pt-4 w-screen min-h-screen overflow-hidden grid sm:flex sm:items-center sm:justify-center sm:bg-gray-200 dark:bg-slate-800 dark:sm:bg-gray-950 transition-all duration-200">
             <div className="w-full sm:h-fit sm:max-w-xl sm:grid sm:items-center">
                 <ListTodoWithStore/>            
                 <Footer/>      
